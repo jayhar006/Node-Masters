@@ -8,9 +8,8 @@ class Bank {
     }
 
     getMonthlyInstallment(loanTerm){
-        const interestAmount = (this.loanAmount * this.interestRate) * loanTerm;
-        const monthlyAmort = (interestAmount + this.loanAmount) / loanTerm;
-        return monthlyAmort;
+        const monthly = (this.loanAmount * this.interestRate / 100) + (this.loanAmount / loanTerm)
+        return monthly;
     }
 }
 
